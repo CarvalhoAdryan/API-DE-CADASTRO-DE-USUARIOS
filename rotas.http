@@ -2,13 +2,15 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name": "Usuario1",
-    "email": "user@gmail.com"
+    "name": "Duda",
+    "email": "duda@gmail.com",
+    "password": "0605"
 }
 
 ###
 
 GET http://localhost:3000/users
+Authorization: 
 
 ###
 
@@ -17,9 +19,18 @@ Content-Type: application/json
 
 {
     "name": "Usuario1",
-    "email": "user1@gmail.com"
+    "email": "user1@gmail.com",
 }
 
 ###
 
-DELETE http://localhost:3000/users/4
+DELETE http://localhost:3000/users/5
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "duda@gmail.com",
+    "password": "0605"
+}
