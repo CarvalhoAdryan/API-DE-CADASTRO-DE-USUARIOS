@@ -1,8 +1,7 @@
 import express from 'express'
+import cors from 'cors'
 import 'dotenv/config'
 import { Postgres } from './databasepostgres.js'
-import jwt from 'jsonwebtoken'
-import bcrypt from 'bcrypt'
 import { autenticar } from './middlewares/auth.js'
 
 const db = new Postgres()
@@ -10,6 +9,7 @@ const port = process.env.PORT
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 
 app.get("/",(req,res) =>{
